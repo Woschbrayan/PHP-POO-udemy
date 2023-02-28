@@ -1,0 +1,19 @@
+{
+    "description": "SISTEMA ADM",
+    "authors": [
+        {
+            "name": "Brayan wosch",
+            "email": "brayanwosch@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Core\\": "core",
+            "App\\": "app",
+            "Adms\\":"app/adms",
+            "GerEst\\":"app/gerest"
+        
+        }
+    },
+    "require": {}
+}

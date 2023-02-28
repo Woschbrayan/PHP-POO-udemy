@@ -1,0 +1,16 @@
+{
+    "description": "Aula de MVC",
+    "authors": [
+        {
+            "name": "Martinho Ramos",
+            "email": "contatomartin@outlook.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Sts\\": "app/sts",
+            "Core\\": "core"
+        }
+    },
+    "require": {}
+}
