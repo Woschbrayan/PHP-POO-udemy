@@ -1,3 +1,4 @@
+
 const formNewUser = document.getElementById("form-new-user");
 if (formNewUser) {
     formNewUser.addEventListener("submit", async(e) => {
