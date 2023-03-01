@@ -102,9 +102,13 @@ class AdmsNewUser
     private function sendEmail():void
     {
         $sendEmail = new \App\adms\Models\helper\AdmsSendEmail();
-        $sendEmail->sendEmail();
+        $sendEmail->sendEmail(1);
 
-        $_SESSION['msg'] = "<p style='color: green;'>Usuário cadastrado com sucesso!</p>";
+        if($sendEmail->getResult()){
+            $_SESSION['msg'] = "<p style='color: green;'>Usuário cadastrado com sucesso! verefiqe sua caixa de e-mail para comfirmar o e-mail!</p>";
+            $this->result = true;
+        }
+        $_SESSION['msg'] = "<p style='color: green;'>Usuário cadastrado com sucesso! Houve erro ao enviar o email de comfirmação entre em contato com ".ADMEMAIL."</p>";
         $this->result = false;
     }
 }
