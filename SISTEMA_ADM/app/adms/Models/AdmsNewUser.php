@@ -62,7 +62,10 @@ class AdmsNewUser
         $valEmailSingle = new \App\adms\Models\helper\AdmsValEmailSingle();
         $valEmailSingle->validateEmailSingle($this->data['email']);
 
-        if (($valEmail->getResult()) and ($valEmailSingle->getResult())) {
+       $valPassword = new \App\adms\Models\helper\AdmsValPassword();
+        $valPassword->validatePassword($this->data['password']);
+
+        if (($valEmail->getResult()) and ($valEmailSingle->getResult()) and ($valPassword->getResult())) {
             $this->add();
         } else {
             $this->result = false;
