@@ -38,7 +38,7 @@ class AdmsSendEmail
         return $this->result;
     }
 
-    function getDromEmail(): bool
+    function getFromEmail(): bool
     {
         return $this->result;
     }
